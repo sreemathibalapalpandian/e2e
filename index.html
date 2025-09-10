@@ -35,7 +35,7 @@
       text-align: center;
       margin-bottom: 4rem;
       padding: 4rem 2rem;
-      background: linear-gradient(135deg, #f5f3ff, #ede9fe); /* Lavender gradient */
+      background: linear-gradient(135deg, #f5f3ff, #ede9fe);
       border-radius: 40px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.15);
       border: 1px solid #ddd6fe;
@@ -57,12 +57,12 @@
       font-size: 1.35rem;
       font-weight: 600;
       letter-spacing: 0.08em;
-      background: linear-gradient(145deg, #4c1d95, #6d28d9); /* Deep purple */
+      background: linear-gradient(145deg, #4c1d95, #6d28d9);
       color: #ffffff;
       padding: 18px 48px 18px 68px;
       border-radius: 50px;
       display: inline-block;
-      border: 2px solid #a78bfa; /* Soft lavender */
+      border: 2px solid #a78bfa;
       box-shadow: 0 8px 28px rgba(0,0,0,0.15);
       position: relative;
       transition: all 0.4s ease;
@@ -89,7 +89,7 @@
     .section {
       margin: 4rem auto;
       padding: 3rem 2rem;
-      background: #f8f5fe; /* Warm gray-lavender */
+      background: #f8f5fe;
       border-radius: 30px;
       max-width: 1000px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
@@ -107,7 +107,7 @@
     }
 
     /* ———— OFFER ———— */
-    .offer-summary ul {
+    .offer-header ul {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -117,60 +117,27 @@
       font-weight: 500;
     }
 
-    .offer-summary li {
+    .offer-header li {
       padding: 10px 0;
       border-bottom: 1px dashed #e0d5fa;
     }
 
-    .offer-summary li:last-child {
+    .offer-header li:last-child {
       border-bottom: none;
     }
 
-    .offer-summary li::before {
+    .offer-header li::before {
       content: "✅ ";
-      color: #a78bfa; /* Soft lavender */
+      color: #a78bfa;
     }
 
-    /* ———— HOW IT WORKS ———— */
-    .steps {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .step {
-      background: #f0e8fa; /* Soft lavender tint */
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      flex: 1;
-      min-width: 220px;
-      text-align: center;
-      border: 1px solid #e9e4fd;
-      color: #1a1a1a;
-    }
-
-    .step-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #38bdf8; /* Muted teal-blue */
-      margin-bottom: 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .step-text {
-      color: #1a1a1a;
-      font-weight: 500;
-    }
-
-    /* ———— THE EMPTY 2 ELEGANT DIFFERENCE — CLEAN, CENTERED, NO GAPS ———— */
-    .difference-section {
+    /* ———— HOW WE STAGE — SHORT, CLEAR ———— */
+    .staging-process {
       background: #f8f5fe;
       border: 1px solid #e9e4fd;
     }
 
-    .difference-grid {
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
@@ -178,7 +145,7 @@
       justify-content: center;
     }
 
-    .difference-item {
+    .process-item {
       display: flex;
       align-items: flex-start;
       gap: 1.5rem;
@@ -191,32 +158,58 @@
       min-height: 120px;
     }
 
-    .difference-item:hover {
+    .process-item:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
-    .difference-number {
+    .process-number {
       font-size: 2.5rem;
       font-weight: 800;
-      color: #a78bfa; /* Soft lavender */
+      color: #a78bfa;
       font-family: 'Playfair Display', serif;
       line-height: 1;
       min-width: 40px;
     }
 
-    .difference-content h3 {
+    .process-content h3 {
       font-size: 1.3rem;
       color: #1a1a1a;
       margin-bottom: 0.75rem;
       font-weight: 700;
     }
 
-    .difference-content p {
+    .process-content p {
       font-size: 1rem;
       color: #1a1a1a;
       line-height: 1.6;
       font-weight: 400;
+    }
+
+    /* ———— WHY THIS BEATS PHYSICAL STAGING ———— */
+    .why-better {
+      background: #f0e8fa;
+      border: 1px solid #e0d5fa;
+      text-align: center;
+      padding: 2.5rem;
+      border-radius: 24px;
+      margin: 3rem auto;
+      max-width: 900px;
+    }
+
+    .why-better h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #4c1d95;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .why-better p {
+      font-size: 1.2rem;
+      color: #1a1a1a;
+      line-height: 1.8;
+      font-weight: 500;
     }
 
     /* ———— GALLERY — CLEAN 2-COLUMN GRID ———— */
@@ -232,7 +225,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      background: #faf5ff; /* Ultra soft lavender */
+      background: #faf5ff;
       padding: 2.5rem;
       border-radius: 24px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
@@ -282,11 +275,11 @@
     }
 
     .before-label {
-      background: linear-gradient(135deg, #4c1d95, #2d1d6b); /* Deep purple */
+      background: linear-gradient(135deg, #4c1d95, #2d1d6b);
     }
 
     .after-label {
-      background: linear-gradient(135deg, #38bdf8, #0891b2); /* Teal-blue */
+      background: linear-gradient(135deg, #38bdf8, #0891b2);
     }
 
     /* ———— CTA ———— */
@@ -294,7 +287,7 @@
       text-align: center;
       margin: 5rem auto;
       padding: 4rem 2rem;
-      background: linear-gradient(135deg, #4f46e5, #6d28d9); /* Deep indigo to purple */
+      background: linear-gradient(135deg, #4f46e5, #6d28d9);
       border-radius: 30px;
       max-width: 1000px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.1);
@@ -319,7 +312,7 @@
     .cta-button {
       display: inline-block;
       background: white;
-      color: #4f46e5; /* Deep indigo */
+      color: #4f46e5;
       font-size: 1.3rem;
       font-weight: 700;
       padding: 18px 48px;
@@ -340,7 +333,7 @@
     .faq-item {
       margin-bottom: 1.5rem;
       padding: 1.5rem;
-      background: #f5f0ff; /* Soft lavender */
+      background: #f5f0ff;
       border-radius: 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       border: 1px solid #e9e4fd;
@@ -350,7 +343,7 @@
     .faq-question {
       font-weight: 700;
       font-size: 1.1rem;
-      color: #a78bfa; /* Soft lavender */
+      color: #a78bfa;
       margin-bottom: 0.5rem;
     }
 
@@ -364,7 +357,7 @@
       text-align: center;
       margin-top: 6rem;
       padding: 3rem 2rem;
-      color: #a78bfa; /* Soft lavender */
+      color: #a78bfa;
       font-size: 1.1rem;
       letter-spacing: 0.05em;
       border-top: 2px solid rgba(167, 139, 250, 0.3);
@@ -379,15 +372,13 @@
       h1 { font-size: 2.8rem; }
       .email { font-size: 1.2rem; padding: 16px 40px 16px 60px; }
       .section { padding: 2rem 1.5rem; }
-      .steps { flex-direction: column; }
-      .difference-grid {
+      .process-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
-      .difference-item {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
+      .process-item {
+        flex-direction: column;
+        text-align: center;
       }
       .gallery-grid { grid-template-columns: 1fr; }
       .gallery-item { grid-template-columns: 1fr; padding: 2rem; }
@@ -402,7 +393,7 @@
       .section { padding: 1.5rem 1rem; }
       .gallery-item { padding: 1.5rem; }
       .label { font-size: 0.85rem; padding: 6px 16px; }
-      .difference-number { font-size: 2rem; }
+      .process-number { font-size: 2rem; }
     }
   </style>
 </head>
@@ -417,7 +408,7 @@
     </div>
 
     <!-- ✅ OFFER -->
-    <div class="section offer-summary">
+    <div class="section offer-header">
       <h2>What You Get</h2>
       <ul>
         <li>✅ Up to 15 rooms staged per listing</li>
@@ -427,51 +418,38 @@
       </ul>
     </div>
 
-    <!-- ✅ HOW IT WORKS -->
-    <div class="section how-it-works">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-text">Send photos</div>
+    <!-- ✅ HOW WE STAGE — SHORT, CLEAR -->
+    <div class="section staging-process">
+      <h2>How We Stage</h2>
+      <div class="process-grid">
+        <div class="process-item">
+          <div class="process-number">01</div>
+          <div class="process-content">
+            <h3>You Send Photos</h3>
+            <p>Send me high-res photos of your empty rooms — no staging needed.</p>
+          </div>
         </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-text">I stage in 24h</div>
+        <div class="process-item">
+          <div class="process-number">02</div>
+          <div class="process-content">
+            <h3>The Edit</h3>
+            <p>I edit those photos to add furniture and decor — using professional software.</p>
+          </div>
         </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-text">You upload & sell</div>
+        <div class="process-item">
+          <div class="process-number">03</div>
+          <div class="process-content">
+            <h3>You Upload & Sell</h3>
+            <p>Get started with listing your home staged images.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ✅ THE EMPTY 2 ELEGANT DIFFERENCE — CLEAN, CENTERED, NO GAPS -->
-    <div class="section difference-section">
-      <h2>The Empty 2 Elegant Difference</h2>
-      <div class="difference-grid">
-        <div class="difference-item">
-          <div class="difference-number">01</div>
-          <div class="difference-content">
-            <h3>No Furniture, No Fuss</h3>
-            <p>Stage listings without moving a single couch. Just send photos.</p>
-          </div>
-        </div>
-        <div class="difference-item">
-          <div class="difference-number">02</div>
-          <div class="difference-content">
-            <h3>24-Hour Magic</h3>
-            <p>Your empty rooms, beautifully furnished — before your cof fee gets cold.</p>
-          </div>
-        </div>
-        <div class="difference-item">
-          <div class="difference-number">03</div>
-          <div class="difference-content">
-            <h3>First Listing Free</h3>
-            <p>See the difference before you commit.</p>
-          </div>
-        </div>
-      </div>
+    <!-- ✅ WHY THIS BEATS PHYSICAL STAGING -->
+    <div class="why-better">
+      <h3>Why This Beats Physical Staging</h3>
+      <p>No furniture rentals. No moving crews. No scheduling headaches. Just send photos — I’ll return beautifully staged images in 24 hours for a fraction of the cost.</p>
     </div>
 
     <!-- ✅ GALLERY -->
@@ -577,7 +555,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <p> • AI Virtual Staging for US •</p>
+      <p>Virtual Staging for US Real Estate • $250 for 15 Images • First Listing FREE</p>
     </footer>
 
   </div>
