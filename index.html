@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E2E</title>
+  <title>Empty 2 Elegant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,15 +30,47 @@
       padding: 4rem 2rem;
     }
 
+    /* ———— COLOR PALETTE — CONSISTENT & LUXE ———— */
+    :root {
+      --primary-dark: #4c1d95;
+      --primary: #6d28d9;
+      --primary-light: #a78bfa;
+      --secondary-bg: #f5f3ff;
+      --card-bg: #f8f5fe;
+      --border: #e9e4fd;
+      --text-dark: #0d0d0d;
+      --text-muted: #6b7280;
+      --white: #ffffff;
+    }
+
     /* ———— HERO ———— */
     .header {
       text-align: center;
       margin-bottom: 4rem;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--secondary-bg), #ede9fe);
       border-radius: 40px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-      border: 1px solid #ddd6fe;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(167,139,250,0.1) 0%, transparent 70%);
+      pointer-events: none;
+      animation: pulse 6s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: translate(0, 0) rotate(0deg); }
+      to { transform: translate(5px, 5px) rotate(1deg); }
     }
 
     h1 {
@@ -46,61 +78,83 @@
       font-size: 4rem;
       font-weight: 800;
       letter-spacing: -2px;
-      margin-bottom: 1rem;
-      color: #0d0d0d;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
       text-shadow: 0 2px 4px rgba(255,255,255,0.3);
-    }
-
-    /* ✉️ EMAIL BADGE */
-    .email {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      background: linear-gradient(145deg, #4c1d95, #6d28d9);
-      color: #ffffff;
-      padding: 18px 48px 18px 68px;
-      border-radius: 50px;
-      display: inline-block;
-      border: 2px solid #a78bfa;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.15);
       position: relative;
-      transition: all 0.4s ease;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-      margin: 0.5rem;
     }
 
-    .email::before {
-      content: "✉️";
-      position: absolute;
-      left: 22px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.2rem;
-      opacity: 0.95;
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--primary-dark);
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      opacity: 0.9;
     }
 
-    .email:hover {
-      transform: translateY(-6px) scale(1.04);
-      box-shadow: 0 14px 36px rgba(0,0,0,0.2);
+    /* ———— NEW HERO CTA BUTTON — ELEGANT, BOLD, HIGH-CONVERTING ———— */
+    .cta-hero {
+      display: inline-block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--white);
+      background: linear-gradient(145deg, var(--primary-dark), var(--primary));
+      padding: 18px 52px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+      cursor: pointer;
+      margin: 2rem auto 2.5rem;
+      max-width: 400px;
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .cta-hero:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      background: linear-gradient(145deg, #5e29e8, #7d34e5);
+    }
+
+    .cta-hero:active {
+      transform: translateY(0);
+    }
+
+    .email-backup {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      letter-spacing: 0.04em;
+      opacity: 0.7;
+      font-weight: 400;
     }
 
     /* ———— SECTION STYLING — PASTEL BACKGROUNDS ———— */
     .section {
       margin: 4rem auto;
       padding: 3rem 2rem;
-      background: #f8f5fe;
+      background: var(--card-bg);
       border-radius: 30px;
       max-width: 1000px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      border: 1px solid #e9e4fd;
-      color: #1a1a1a;
+      border: 1px solid var(--border);
+      color: var(--text-dark);
     }
 
     .section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      color: #0d0d0d;
+      color: var(--text-dark);
       margin-bottom: 2rem;
       text-align: center;
       font-weight: 700;
@@ -113,13 +167,13 @@
       margin: 0;
       font-size: 1.1rem;
       line-height: 2;
-      color: #1a1a1a;
+      color: var(--text-dark);
       font-weight: 500;
     }
 
     .offer-header li {
       padding: 10px 0;
-      border-bottom: 1px dashed #e0d5fa;
+      border-bottom: 1px dashed var(--border);
     }
 
     .offer-header li:last-child {
@@ -128,13 +182,13 @@
 
     .offer-header li::before {
       content: "✅ ";
-      color: #a78bfa;
+      color: var(--primary-light);
     }
 
     /* ———— HOW WE STAGE — SHORT, CLEAR ———— */
     .staging-process {
-      background: #f8f5fe;
-      border: 1px solid #e9e4fd;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
     }
 
     .process-grid {
@@ -149,7 +203,7 @@
       display: flex;
       align-items: flex-start;
       gap: 1.5rem;
-      background: white;
+      background: var(--white);
       padding: 2rem;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
@@ -166,7 +220,7 @@
     .process-number {
       font-size: 2.5rem;
       font-weight: 800;
-      color: #a78bfa;
+      color: var(--primary-light);
       font-family: 'Playfair Display', serif;
       line-height: 1;
       min-width: 40px;
@@ -174,14 +228,14 @@
 
     .process-content h3 {
       font-size: 1.3rem;
-      color: #1a1a1a;
+      color: var(--text-dark);
       margin-bottom: 0.75rem;
       font-weight: 700;
     }
 
     .process-content p {
       font-size: 1rem;
-      color: #1a1a1a;
+      color: var(--text-dark);
       line-height: 1.6;
       font-weight: 400;
     }
@@ -195,21 +249,33 @@
       border-radius: 24px;
       margin: 3rem auto;
       max-width: 900px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
 
     .why-better h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      color: #4c1d95;
+      color: var(--primary-dark);
       margin-bottom: 1.5rem;
       font-weight: 700;
     }
 
     .why-better p {
       font-size: 1.2rem;
-      color: #1a1a1a;
+      color: var(--text-dark);
       line-height: 1.8;
       font-weight: 500;
+    }
+
+    /* ———— GALLERY TITLE — MATCHES HEADER TYPOGRAPHY ———— */
+    .gallery-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--white);
+      margin: 4rem 0 2rem;
+      text-align: center;
+      font-weight: 700;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     /* ———— GALLERY — CLEAN 2-COLUMN GRID ———— */
@@ -229,9 +295,9 @@
       padding: 2.5rem;
       border-radius: 24px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      border: 1px solid #e9e4fd;
+      border: 1px solid var(--border);
       transition: all 0.4s ease;
-      color: #1a1a1a;
+      color: var(--text-dark);
     }
 
     .gallery-item:hover {
@@ -275,7 +341,7 @@
     }
 
     .before-label {
-      background: linear-gradient(135deg, #4c1d95, #2d1d6b);
+      background: linear-gradient(135deg, var(--primary-dark), #2d1d6b);
     }
 
     .after-label {
@@ -287,16 +353,16 @@
       text-align: center;
       margin: 5rem auto;
       padding: 4rem 2rem;
-      background: linear-gradient(135deg, #4f46e5, #6d28d9);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
       border-radius: 30px;
       max-width: 1000px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     }
 
     .cta-section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
-      color: white;
+      color: var(--white);
       margin-bottom: 1rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
       font-weight: 700;
@@ -311,8 +377,8 @@
 
     .cta-button {
       display: inline-block;
-      background: white;
-      color: #4f46e5;
+      background: var(--white);
+      color: var(--primary-dark);
       font-size: 1.3rem;
       font-weight: 700;
       padding: 18px 48px;
@@ -320,7 +386,8 @@
       text-decoration: none;
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
       transition: all 0.3s ease;
-      border: 2px solid white;
+      border: 2px solid var(--white);
+      font-family: 'Inter', sans-serif;
     }
 
     .cta-button:hover {
@@ -336,20 +403,22 @@
       background: #f5f0ff;
       border-radius: 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      border: 1px solid #e9e4fd;
-      color: #1a1a1a;
+      border: 1px solid var(--border);
+      color: var(--text-dark);
     }
 
     .faq-question {
       font-weight: 700;
       font-size: 1.1rem;
-      color: #a78bfa;
+      color: var(--primary-light);
       margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
     }
 
     .faq-answer {
-      color: #1a1a1a;
+      color: var(--text-dark);
       font-weight: 500;
+      font-family: 'Inter', sans-serif;
     }
 
     /* ———— FOOTER ———— */
@@ -357,7 +426,7 @@
       text-align: center;
       margin-top: 6rem;
       padding: 3rem 2rem;
-      color: #a78bfa;
+      color: var(--primary-light);
       font-size: 1.1rem;
       letter-spacing: 0.05em;
       border-top: 2px solid rgba(167, 139, 250, 0.3);
@@ -368,9 +437,11 @@
     /* 📱 MOBILE RESPONSIVE */
     @media (max-width: 768px) {
       .container { padding: 2rem 1rem; }
-      .header { padding: 3rem 1.5rem; }
+      .header { padding: 4rem 1.5rem; }
       h1 { font-size: 2.8rem; }
-      .email { font-size: 1.2rem; padding: 16px 40px 16px 60px; }
+      .subtitle { font-size: 1.2rem; }
+      .cta-hero { font-size: 1.4rem; padding: 16px 44px; max-width: 300px; }
+      .email-backup { font-size: 0.85rem; }
       .section { padding: 2rem 1.5rem; }
       .process-grid {
         grid-template-columns: 1fr;
@@ -379,33 +450,39 @@
       .process-item {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
       }
       .gallery-grid { grid-template-columns: 1fr; }
       .gallery-item { grid-template-columns: 1fr; padding: 2rem; }
       .cta-section { padding: 3rem 1.5rem; }
       .cta-section h2 { font-size: 2rem; }
+      .cta-section p { font-size: 1.1rem; }
       footer { padding: 2rem 1rem; font-size: 1rem; }
     }
 
     @media (max-width: 480px) {
       h1 { font-size: 2.3rem; }
-      .email { font-size: 1.1rem; padding: 14px 36px 14px 56px; }
       .section { padding: 1.5rem 1rem; }
       .gallery-item { padding: 1.5rem; }
       .label { font-size: 0.85rem; padding: 6px 16px; }
       .process-number { font-size: 2rem; }
+      .gallery-title { font-size: 2rem; }
+      .cta-section h2 { font-size: 1.8rem; }
+      .cta-hero { font-size: 1.3rem; padding: 14px 40px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- HEADER -->
+    <!-- HEADER — CLEAN, POWERFUL, NO EMAILS SHOWN -->
     <div class="header">
       <h1>Empty 2 Elegant</h1>
-      <div class="email">sreemathibalap@gmail.com</div>
-      <div class="email">sreemathibala1@gmail.com</div>
-      <div class="email">sreemathibala2@gmail.com</div>
+      <p class="subtitle">Professional Virtual Staging for Real Estate Listings</p>
+      <a href="mailto:sreemathibalap@gmail.com?subject=Ready%20for%20Virtual%20Staging&body=Hi%2C%20I'd%20like%20to%20stage%20my%20listing.%20Please%20find%20attached%20photos%20of%20the%20empty%20rooms." class="cta-hero">
+        Send Photos & Get Started
+      </a>
+      <p class="email-backup">Reply to: sreemathibalap@gmail.com</p>
     </div>
 
     <!-- ✅ OFFER -->
@@ -441,7 +518,7 @@
           <div class="process-number">03</div>
           <div class="process-content">
             <h3>You Upload & Sell</h3>
-            <p>Get high-res files — ready to upload to Zillow, MLS, or Instagram.</p>
+            <p>Get started with uploading your house images in Zillow or Instagram.</p>
           </div>
         </div>
       </div>
@@ -454,7 +531,7 @@
     </div>
 
     <!-- ✅ GALLERY -->
-    <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 4rem 0 2rem; color: #f8f8f8;">Our Work</h2>
+    <h2 class="gallery-title">Our Work</h2>
 
     <div class="gallery-grid">
       <!-- ROW 1 -->
@@ -554,9 +631,9 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER — UPDATED COPY -->
     <footer>
-      <p>Virtual Staging for US Real Estate • $250 for 15 Images • First Listing FREE</p>
+      <p>US Real Estate Virtual Staging • $250 / 15 Images • First Listing FREE • 24-Hour Delivery</p>
     </footer>
 
   </div>
